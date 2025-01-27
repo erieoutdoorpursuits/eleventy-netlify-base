@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eleventy-netlify-base</title>
+    <!-- Facebook Metadata -->
+    <meta property="og:title" content="Blank Page">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com">
+    <meta property="og:image" content="https://www.example.com/image.jpg">
+    <meta property="og:description" content="This is a blank page with Facebook metadata.">
+    <meta property="og:site_name" content="Example Site">
+    <link rel="stylesheet" href="/assets/style.css">
+     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <style>
+    .container {
+  display: flex; 
+}
+
+.column {
+  flex: 1; 
+  padding: 10px; 
+}
+
+/* Optional: Add styles for the link */
+.embed-link {
+  color: blue;
+  text-decoration: underline;
+}</style>
+<body>
+<div class="container">
+  <div class="column left">
+  <h1>left Column<h1>
+  
+    </div>
+  <div class="column center">
+  <h1>Center Column<h1>
+<h2>This is my Center columnd</h2>
+<p>Content below1</p>
+{{ content | safe }}
+    <a href="https://www.erieoutdoorpursuits.net/" class="embed-link">erieoutdoorspuer</a>
+    <div id="embedded-content"></div> 
+  </div>
+  <div class="column right">
+   <h1>right Column<h1>
+    </div>
+</div>
+
+   <script src="/admin/netlify-cms.js"></script>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<script>
+const embedLink = document.querySelector('.embed-link');
+const embedContent = document.getElementById('embedded-content');
+
+embedLink.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default link behavior
+
+  const iframe = document.createElement('iframe');
+  iframe.src = embedLink.getAttribute('href'); 
+  iframe.width = "100%"; // Adjust width as needed
+  iframe.height = "500px"; // Adjust height as needed 
+
+  embedContent.innerHTML = ''; // Clear previous content (if any)
+  embedContent.appendChild(iframe);
+});
+</script>
+</body>
+</html>

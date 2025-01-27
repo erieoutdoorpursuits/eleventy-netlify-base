@@ -3,14 +3,26 @@ layout: base.njk
 title: My Blog
 ---
 
-<h2>Welcome to my content doay </h2>
-
-<p>Colections</p>
-<p></p>
-<p></p>
 <ul>
 {% for post in collections.post %}
-<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+<h1><a href="{{ post.url }}">{{ post.data.title }}</a></h1>
 <p>{{ post.data.decription }}</p>
 {% endfor %}
 </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

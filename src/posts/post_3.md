@@ -1,7 +1,7 @@
 ---
-title: My Second Post
+title: My third Post
 date: 2023-10-01T00:00:00.000Z
-decription: Mountain Biking at Boutwell State Forest 
+decription:  Skiing at Boutwell State Forest 
 layout: base.njk
 ---
 

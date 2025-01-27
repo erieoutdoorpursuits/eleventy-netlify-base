@@ -1,17 +1,13 @@
 ---
-title: First Post
+title: My first Post
 date: 2023-10-01T00:00:00.000Z
-decription: decription My Second First Post today 
-
+decription: Cross-Country Skiing at Boutwell State Forest 
+layout: base.njk
 ---
-This is my first post1
-
-{{ title }}
-
-# What happening today
-
-## **Tueday January, 6th**
 
 
+<h2>{{ title }}</h2>
+## My first state forest
 
-**T﻿his will be y first post**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
